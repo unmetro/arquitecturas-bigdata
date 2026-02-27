@@ -1,0 +1,6 @@
+FROM python:3.9-slim
+WORKDIR /app
+COPY books-service.py .
+RUN pip install flask requests
+EXPOSE 5000
+CMD ["python", "books-service.py"]
